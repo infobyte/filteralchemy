@@ -77,10 +77,12 @@ class FilterSetMeta(type):
                 opts.converter.field_for(opts.model, prop.key)
             )
             operators = overrides.get('operators') or opts.operators
+            default_operator = (overrides.get('default_operator') or
+                                opts.default_operator)
             for operator in operators:
                 operator_name = (
                     operator.label
-                    if operator != opts.default_operator
+                    if operator != default_operator
                     else None
                 )
                 name = underscore_formatter(prop.key, operator_name)
