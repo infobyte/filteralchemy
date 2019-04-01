@@ -32,13 +32,17 @@ def read(fname):
     return content
 
 setup(
-    name='filteralchemy',
+    name='filteralchemy-fork',
     version=find_version('filteralchemy/__init__.py'),
-    description='Declarative query builder for SQLAlchemy',
+    description=(
+        'Declarative query builder for SQLAlchemy. This is a fork of the '
+        'original project with the changes of https://github.com/jmcarp/filteralchemy/pull/2 '
+        'applied'
+    ),
     long_description=read('README.rst'),
-    author='Joshua Carp',
-    author_email='jm.carp@gmail.com',
-    url='https://github.com/jmcarp/filteralchemy',
+    author='Matias Lang',
+    author_email='shareman1204@gmail.com',
+    url='https://github.com/infobyte/filteralchemy',
     packages=find_packages(exclude=('test*', )),
     package_dir={'filteralchemy': 'filteralchemy'},
     include_package_data=True,
